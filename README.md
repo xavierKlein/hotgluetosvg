@@ -2,10 +2,6 @@ HOTGLUE TO SVG
 
 Simple BASH script who's turning an Hotglue page to a fully editable SVG in Inskape. You can also turn it into PDF.
 
-HOTGLUE TO SVG
-
-Simple BASH script who's turning an Hotglue page to a fully editable SVG in Inskape. You can also turn it into PDF.
-
 Install Hotglue (http://hotglue.org/) on your server.
 Make something on your hotglue page.
 When it's done, run the script in a terminal ("cd script directory" and "bash svgpagev03.sh").
