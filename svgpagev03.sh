@@ -89,7 +89,7 @@ fi
      lineHeight=$(cat $i | grep text-line-height: | cut -d: -f2)
  if [ -z $lineHeight ]
 then
-fontSize=$(echo 'scale=4; 1.2*1.2' | bc)
+fontSize=$(bc <<< "scale=2;1.2*${fontSize}")
 
 fi
      
@@ -125,11 +125,14 @@ fi
 echo $twidth 
  
  #width=$(( $twidth + $(($textPaddingX * 2)) ))
-width=$(echo 'scale=2; (${twidth}+${textPaddingX})' | bc )
+width=$(bc <<< "scale=2;${twidth}+${textPaddingX}+${textPaddingY}" )
+#width=$(echo 'scale=2; (2.5+3.5)' | bc )
  #height=$(( $theight + $(($textPaddingY * 2)) ))
-height=$(echo 'scale=2; (${height}+${textPaddingY})' | bc)
+#height=$(echo 'scale=2; ($height+$textPaddingY)' | bc)
+height=$(bc <<< "scale=2;${theight}+${textPaddingY}+${textPaddingY}")
 
-echo $width 
+
+
 
 
  echo "<g "																				>>$file
@@ -221,5 +224,5 @@ sed -i ':a;N;$!ba;s/>\n/>/g' $file
 $(inkscape -f $file -A page${newfile}.pdf)
 
 echo "${width}"
-
+echo $width 
 
