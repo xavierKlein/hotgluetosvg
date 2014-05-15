@@ -81,9 +81,9 @@ fi
 fontSize=$(cat $i | grep text-font-size: | cut -d: -f2)
 if [ -z $fontSize ]
 then
-fontSize='1.2em'
-
+fontSize="1.2em"
 fi
+
      fontStyle=$(cat $i  | grep text-font-style: | cut -d: -f2) 
      fontWeight=$(cat $i | grep text-font-weight: | cut -d: -f2) 
      lineHeight=$(cat $i | grep text-line-height: | cut -d: -f2)
@@ -198,11 +198,13 @@ then
 echo "</flowRegion>"					>>$file
 
  
-cat $i | grep  -A10000 "^$"| grep -v "^$" | while read line  
+cat $i | grep  -A10000 "^$" | sed '1d'| while read line  
 do   
 echo -e "${line}" 
 
 echo "<flowPara id='flowPara'><flowSpan id='flowSpan'>${line}</flowSpan></flowPara>"  >>$file
+
+#if cat $i | grep  -A10000 "^$"| grep "^$"
 
 
 done
