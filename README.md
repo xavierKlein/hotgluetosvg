@@ -1,4 +1,8 @@
 HOTGLUE TO SVG
+Xavier Klein in collaboration with LAFKON.
+
+licensed under GNU GPL version 3 (or later)
+see http://www.gnu.org/licenses/
 
 Simple BASH script who's turning an Hotglue page to a fully editable SVG in Inskape. You can also turn it into PDF.
 
