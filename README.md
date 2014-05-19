@@ -7,6 +7,7 @@ see http://www.gnu.org/licenses/
 Simple BASH script who's turning an Hotglue page to a fully editable SVG in Inskape. You can also turn it into PDF.
 
 Install Hotglue (http://hotglue.org/) on your server.
+Put the .htaccess file from my Github into the "content" folder of Hotglue on your server.
 Make something on your hotglue page.
 When it's done, run the script in a terminal ("cd script directory" and "bash svgpagev03.sh").
 Your terminal will ask you to enter the URL of your Hotglue page content (www.yousite.com/hotglue/content/yourpage/head).
@@ -14,6 +15,7 @@ Push enter and wait for the result, it gives you all the files + a svg and a pdf
 
 
 Installez Hotglue (http://hotglue.org/) sur votre serveur.
+Mettez le fichier .htaccess telechargé depuis mon Github dans le fichier "content" de Hotglue sur votre serveur.
 Construisez une page avec Hotglue.
 Quand c'est fait, lancez le script dans un terminal ("cd script directory" et "bash svgpagev03.sh").
 Le terminal devrai vous demandez l'URL où se trouve les fichiers (www.yousite.com/hotglue/content/yourpage/head).
