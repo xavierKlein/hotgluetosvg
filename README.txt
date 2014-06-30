@@ -26,7 +26,8 @@ When it's done, run one of the 3 script :
 -svgpage-noresize, force the element outside a page to come in the page without resize.
 -svgpage-resize, force the element outside a page to come in the page and resize it to fit in the page.
 
-Your terminal will ask you to enter the URL of your Hotglue page content (www.yoursite.com/hotglue/content/yourpage/head).
+Your terminal will ask you to enter the URL of your Hotglue page content 
+(www.yoursite.com/hotglue/content/yourpage/head).
 Push enter and wait for the result, it gives you all the files + a svg and a pdf files.
 
 Known issues :
