@@ -73,9 +73,9 @@ echo "<svg"																				>>$file
  
 
  
-GLOBIGNORE="1*~"
+GLOBIGNORE="4*~"
 #Boxes 
- for i in 1*
+ for i in 4*
  do
  
  
@@ -85,10 +85,10 @@ GLOBIGNORE="1*~"
 
 
 color=$(cat $i  | grep text-background | cut -d: -f2)
-if [$color="transparent"]
-then 
-color="rgb(255,255,255)"
-fi
+#if [ $color="transparent" ]
+#then 
+#color="rgb(255,255,255)"
+#fi
 
 alpha=$(cat $i  | grep object-opacity | cut -d: -f2)
 if [ -z $alpha ]
@@ -97,11 +97,11 @@ alpha=1
 fi
 
 fontSize=$(cat $i | grep text-font-size: | cut -d: -f2)
-if [ -z $fontSize ]
-then
-fontSize="1.2em"
-fontSize2="1.2"
-fi
+#if [ -z $fontSize ]
+#then
+#fontSize="1.2em"
+#fontSize2="1.2"
+#fi
 
      fontStyle=$(cat $i  | grep text-font-style: | cut -d: -f2) 
      fontWeight=$(cat $i | grep text-font-weight: | cut -d: -f2) 
